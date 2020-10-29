@@ -1,0 +1,80 @@
+<Collapse open={this.state.collapseOpen} navbar>
+
+          <Nav navbar>
+            <NavItem>
+              <NavLink active href="#">
+                Active
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#" disabled>
+                Disabled
+              </NavLink>
+            </NavItem>
+            <Dropdown
+              open={this.state.dropdownOpen}
+              toggle={this.toggleDropdown}
+            >
+              <DropdownToggle nav caret>
+                Dropdown
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Action</DropdownItem>
+                <DropdownItem>Another action</DropdownItem>
+                <DropdownItem>Something else here</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </Nav>
+
+          <Nav navbar className="ml-auto">
+            <InputGroup size="sm" seamless>
+              <InputGroupAddon type="prepend">
+                <InputGroupText>
+                  <FontAwesomeIcon icon={faSearch} />
+                </InputGroupText>
+              </InputGroupAddon>
+              <FormInput className="border-0" placeholder="Search..." />
+            </InputGroup>
+          </Nav>
+        </Collapse>
+
+
+        {
+        token ? (
+          <Home/>
+        ) : (
+          <Login/>
+        )
+      }
+      Nav,
+  NavItem,
+  NavLink,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  FormInput,
+  Collapse
+    NavbarToggler,
+ <NavBar></NavBar>
+            <Table striped bordered hover variant="dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Artist</th>
+                    </tr>
+                    <tbody>
+                       {TopArtists?.name.map((artists,index) =>{
+                           return(
+                               <tr key={index}>
+                                   <td>{artists.index}</td>
+                                   <td>{artists.name}</td>
+                               </tr>
+                           )
+                       })};
+                    </tbody>
+                </thead>
+            </Table>
