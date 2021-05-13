@@ -18,4 +18,4 @@ Spotify Knowledge uses:
 - Github ;p
 
 ## Live app
-[Live App](spotify-knowledge.vercel.app)
+[Live App](https://spotify-knowledge.vercel.app)
